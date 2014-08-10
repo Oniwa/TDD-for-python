@@ -94,11 +94,5 @@ class NewVisitorTest(LiveServerTestCase):
 
         # Satisfied, they both go back to sleep
 
-        #TODO: Adjust model so that items are associated with different lists
-        #TODO: add unique URLs for each list
-        #TODO: add a URL for creating a new list via POST
-        #TODO: Add URLs for adding a new item to an existing list via POST
-
-
 if __name__ == '__main__':
     unittest.main(warnings='ignore')
