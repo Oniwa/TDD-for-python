@@ -26,7 +26,6 @@ class HomePageTest(TestCase):
         request.method = 'POST'
         request.POST['item_text'] = 'A new list item'
 
-        #TODO: Unused Variable
         response = home_page(request)
 
         self.assertEqual(Item.objects.count(), 1)
