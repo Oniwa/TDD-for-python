@@ -51,10 +51,12 @@ class NewVisitorTest(unittest.TestCase):
         self.check_for_row_in_list_table('1: Buy peacock feathers')
         self.check_for_row_in_list_table('2: Use peacock feathers to '
                                          'make a fly')
+        # TODO: Clean up after FT runs
 
         # Edith wonders whether the site will remember her list.  Then she sees
         # that the site has generated a unique URL for her -- there is some
         # explanatory text to that effect.
+        # TODO: Support more than one list
         self.fail()
 
         # She visits that URL - her to-do list is still there
