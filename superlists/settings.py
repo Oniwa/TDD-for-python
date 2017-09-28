@@ -25,7 +25,7 @@ SECRET_KEY = '9baw-)#&ilbv2ybf_%8q8%6f=^rs1&)8arimh@x8=k#j3x)4ps'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [superlists-staging.jdbarks.com]
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
