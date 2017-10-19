@@ -17,7 +17,7 @@ def view_list(request, list_id):
             item = Item(text=request.POST['item_text'], list=list_)
             item.full_clean()
             item.save()
-            return redirect(f'/lists/{list_.id}/')
+            return redirect(list_)
         except ValidationError:
             error = "You can't have an empty list item"
 
@@ -25,7 +25,6 @@ def view_list(request, list_id):
 
 
 def new_list(request):
-    #TODO: Get rid of hardcoded URLs
     list_ = List.objects.create()
     item = Item.objects.create(text=request.POST['item_text'], list=list_)
     #TODO: Remove duplication of validation logic in views
@@ -35,5 +34,5 @@ def new_list(request):
         list_.delete()
         error = "You can't have an empty list item"
         return render(request, 'home.html', {"error": error})
-    return redirect(f'/lists/{list_.id}/')
+    return redirect(list_)
 
